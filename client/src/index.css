@@ -11,3 +11,11 @@ body {
     @apply bg-slate-800 text-darkTextPrimary; /* Dark mode default */
   }
   
+
+@layer base {
+    body {
+      @apply bg-blue-950 text-white
+    
+    }
+  }
+
