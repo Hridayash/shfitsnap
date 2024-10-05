@@ -2,9 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+/* index.css */
+body {
+    @apply bg-white text-textPrimary; /* Light mode default */
+  }
+  
+  .dark body {
+    @apply bg-slate-800 text-darkTextPrimary; /* Dark mode default */
+  }
+  
+
 @layer base {
     body {
       @apply bg-blue-950 text-white
     
     }
   }
+
