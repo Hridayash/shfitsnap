@@ -3,6 +3,7 @@ export default function Home (){
         <>
             <h1>SHIFTSNAP</h1>
             <p>Home</p>
+            <h1>Congratulation you have logged in</h1>
             
         </>
     );
