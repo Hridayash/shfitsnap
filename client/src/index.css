@@ -10,6 +10,7 @@ body {
   .dark body {
     @apply bg-slate-800 text-darkTextPrimary; /* Dark mode default */
   }
+
   
 
 @layer base {
