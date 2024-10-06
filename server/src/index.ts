@@ -5,12 +5,17 @@ import dotenv from "dotenv"
 import UserRoute from './routes/user'
 import cors from "cors"
 
+
 //initializing imports
+
 
 dotenv.config()
 const app = express()
 app.use(express.json())
 app.use(cors())
+
+
+
 
 
 //routes 

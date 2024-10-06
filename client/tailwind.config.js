@@ -1,11 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+
+
   darkMode : 'class' , 
+
+
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+
+
     extend: {
       colors: {
         primary: '#4A90E2',  // Soft Blue (for light mode)
@@ -24,6 +30,7 @@ export default {
         darkAccent: '#FFD700',  // Accent color for dark mode
       },
     },
+
   },
   plugins: [],
 }
