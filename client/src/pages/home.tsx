@@ -11,6 +11,7 @@ export default function Home (){
 
     return (
         <>
+
            <Header />
 
            <Summary />
@@ -20,6 +21,7 @@ export default function Home (){
                         onClick={toggleDarkMode}
                       label="Toggle Dark Mode"
                    />
+
 
             
         </>
