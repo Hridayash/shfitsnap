@@ -4,7 +4,7 @@
 
 /* index.css */
 body {
-    @apply bg-white text-textPrimary; /* Light mode default */
+    @apply bg-blue-50 text-textPrimary; /* Light mode default */
   }
   
   .dark body {
