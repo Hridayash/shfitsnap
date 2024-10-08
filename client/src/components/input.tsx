@@ -2,11 +2,11 @@ import { FC } from "react";
 
 interface InputProps {
     type : string;
-    placeholder: string;
+    placeholder ?: string;
     className?: string;
-    name : string;
-    value : string | number;
-    onChange : ( e : React.ChangeEvent<HTMLInputElement>)=>any;  
+    name ? : string;
+    value ?: string | number;
+    onChange? : ( e : React.ChangeEvent<HTMLInputElement>)=>any;  
 }
 
 const Input: FC<InputProps> = (
