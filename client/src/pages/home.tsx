@@ -9,9 +9,11 @@ export default function Home (){
         document.documentElement.classList.toggle('dark');
       };
 
+
+ 
+
     return (
         <>
-
            <Header />
 
            <Summary />
@@ -21,7 +23,6 @@ export default function Home (){
                         onClick={toggleDarkMode}
                       label="Toggle Dark Mode"
                    />
-
 
             
         </>

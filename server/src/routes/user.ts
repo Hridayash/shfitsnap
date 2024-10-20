@@ -84,4 +84,6 @@ router.post('/login' , async(req:Request, res:Response) : Promise <any> =>{
      }
 })
 
+console.log("test")
+
 export default router;
