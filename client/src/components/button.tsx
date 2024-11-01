@@ -1,39 +1,35 @@
-import { FC, ReactNode } from "react";
-
+import { FC } from "react";
 interface ButtonProps {
-    label?: string;  // Make label optional if using children
-    onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
-    type?: 'button' | 'submit' | 'reset';
-    disabled?: boolean;
-    className?: string;
-    children?: ReactNode;  // Add children prop
-    variant?: 'primary' | 'secondary' | 'ghost' | 'destructive'; // Add variant prop
+    label : string;
+    onClick?:(event : React.MouseEvent<HTMLButtonElement>) => void;
+    type? : 'button' | 'submit' | 'reset';
+    disabled? : boolean;
+    className? : string;
+    
 }
+
 
 const Button: FC<ButtonProps> = ({
     label,
     onClick,
     type = "button",
     disabled = false,
-    className = '',
-    children,
-    variant = 'primary',  // Default variant
-}) => {
-    // Determine class names based on the variant
-    const variantClasses = variant === 'secondary' 
-        ? 'bg-secondary dark:bg-darkSecondary' 
-        : 'bg-primary dark:bg-darkPrimary';
+    className = 'bg-secondary dark:bg-darkSecondary text-white py-2 px-20 w-[80%] md:w-[60%]  lg:w-[30%] rounded-md ',
+    
 
+}) =>{
     return (
-        <button
-            type={type}
-            onClick={onClick}
-            disabled={disabled}
-            className={`${variantClasses} text-white py-2 px-4 rounded-md ${className}`}
-        >
-            {children || label}  {/* Renders children if provided, otherwise label */}
+        < button 
+            type = {type}
+            onClick = {onClick} 
+            disabled = {disabled}
+            className={className}
+            >
+       
+          {label}
         </button>
     );
+
 }
 
 export default Button;
