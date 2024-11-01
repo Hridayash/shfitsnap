@@ -2,6 +2,7 @@
 import { Link , useNavigate } from "react-router-dom";
 import { useState  } from "react";
 import axios from "axios";
+
 import Button from "../components/button";
 import Input from "../components/input"
 
@@ -24,7 +25,8 @@ export default function Login(){
         email : '',
         password :''
     })
-
+     
+    const [isSplashVisible, setSplashVisible]= useState(true);// logo animation while opening app
 
 //To change the light mode of the entire app #temporory
     const toggleDarkMode = () => {
@@ -57,6 +59,7 @@ export default function Login(){
 
 
     return(
+
     <div className="flex items-center justify-center " >
         <div>
             <form onSubmit={handleSubmit}>
@@ -90,5 +93,7 @@ export default function Login(){
 
         </div>
     </div>
-    );
+    
+        )
+    
 }
