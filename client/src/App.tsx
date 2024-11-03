@@ -8,6 +8,8 @@ import Profile from "./pages/profile"
 import Signup from "./pages/signup"
 
 import { Route , BrowserRouter , Routes } from "react-router-dom"
+import Terms from "./pages/terms";
+import PrivacyPolicy from "./pages/privacy";
 
 function App() {
 
@@ -21,6 +23,9 @@ function App() {
          <Route path ="/home" element  = {<Home/>} />
          <Route path ="/profile" element  = {<Profile/>} />
          <Route path="/edit" element={<Edit />} />          
+
+         <Route path="/terms" element={<Terms />} />  
+         <Route path="/privacy" element={<PrivacyPolicy />} />    
 
         </Routes>
   
