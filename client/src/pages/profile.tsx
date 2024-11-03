@@ -4,7 +4,9 @@ import Button from "../components/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/card";
 import { Avatar, AvatarFallback, AvatarImage } from "../components/avatar";
 import Separator from "../components/separator";
+
 import { ChevronRight, Clock, Key, UserPlus, FileText, Shield, X, } from "lucide-react";
+
 
 export default function Component() {
   const [user, setUser] = useState({
@@ -13,7 +15,6 @@ export default function Component() {
     avatar: "/placeholder.svg?height=100&width=100"
   });
 
- 
 
   const navigate = useNavigate();
 
@@ -21,7 +22,6 @@ export default function Component() {
     navigate("/edit");
   };
 
-  
 
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
     e.currentTarget.onerror = null; // Prevent looping
@@ -29,7 +29,9 @@ export default function Component() {
   };
 
   const menuItems = [
+
     { icon: Clock, label: "Timesheet & Earnings", href: "/timesheet"  },
+
     { icon: Key, label: "Change Password", href: "/change-password" },
     { icon: UserPlus, label: "Refer a Friend", href: "/refer" },
     { icon: FileText, label: "Terms of Service", href: "/terms" },
@@ -39,6 +41,7 @@ export default function Component() {
   const handleLogout = () => {
     navigate("/login");
   };
+
 
   const handleCloseClick = () => {
     navigate("/home"); // Navigate to the home page when the cross icon is clicked
@@ -52,12 +55,15 @@ export default function Component() {
           </button>
          
           <h1 className=" text-2xl font-black text-blue-600 dark:text-blue-500">PROFILE</h1>
+
           <button className="text-blue-500 hover:text-blue-700" onClick={handleEditClick}>
             Edit
           </button>
         </CardHeader>
+
       
         <CardContent className="flex items-center p-4 ">
+
           <Avatar className="h-20 w-20 mr-4">
             {user.avatar ? (
               <AvatarImage 
@@ -76,12 +82,14 @@ export default function Component() {
         </CardContent>
       </Card>
 
+
       <Card className="bg-slate-50 dark:bg-slate-700">
         <CardContent className="p-0 ">
           {menuItems.map((item, index) => (
             <div key={item.label}>
               <Link to={item.href} className="flex items-center justify-between w-full py-6 px-4 text-gray-700 hover:bg-gray-200">
                 <div className="flex items-center text-teal-500 ">
+
                   <item.icon className="mr-2 h-4 w-4" />
                   <span>{item.label}</span>
                 </div>
@@ -98,8 +106,6 @@ export default function Component() {
         onClick={handleLogout}
         className="bg-red-600 w-full mt-4 flex items-center justify-center py-2 rounded-md text-white hover:bg-red-700 transition"
       />
-
-
     </div>
   );
 }

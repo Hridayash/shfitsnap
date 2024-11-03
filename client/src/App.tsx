@@ -23,8 +23,10 @@ function App() {
          <Route path ="/home" element  = {<Home/>} />
          <Route path ="/profile" element  = {<Profile/>} />
          <Route path="/edit" element={<Edit />} />          
+
          <Route path="/terms" element={<Terms />} />  
          <Route path="/privacy" element={<PrivacyPolicy />} />    
+
         </Routes>
   
     </BrowserRouter>

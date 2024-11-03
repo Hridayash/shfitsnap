@@ -1,15 +1,19 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 import { Avatar, AvatarFallback, AvatarImage } from "../components/avatar";
 import Button from "../components/button";
 import BackButton from "../components/backbutton";
+
 
 export default function Edit() {
     const [user, setUser] = useState({
         name: "John Doe",
         email: "john.doe@example.com",
+
         avatar: "/placeholder.svg?height=100&width=100",
     });
+
     const [newAvatar, setNewAvatar] = useState<string | ArrayBuffer | null>(null);
     const [name, setName] = useState(user.name);
     const [email, setEmail] = useState(user.email);
@@ -19,22 +23,28 @@ export default function Edit() {
         const file = event.target.files?.[0];
         if (file) {
             const reader = new FileReader();
+
             reader.onloadend = () => setNewAvatar(reader.result);
+
             reader.readAsDataURL(file);
         }
     };
 
     const handleUpdateProfile = () => {
+
         setUser((prev) => ({
             ...prev,
             name,
             email,
             avatar: newAvatar as string || prev.avatar,
         }));
+
+
         navigate("/profile", { state: { message: "Your profile has been updated successfully!" } });
     };
 
     return (
+
         
         <div>
             <BackButton />
@@ -49,10 +59,12 @@ export default function Edit() {
                 )}
             </Avatar>
 
+
             <input 
                 type="file" 
                 accept="image/*" 
                 onChange={handleImageChange} 
+
                 className="mt-2 text-sm text-gray-600 dark:text-gray-300 cursor-pointer bg-gray-100 dark:bg-gray-700 rounded-full px-4 py-1"
             />
 
@@ -84,6 +96,7 @@ export default function Edit() {
                 className="mt-4 w-full max-w-md p-2 bg-teal-500 hover:bg-teal-600 dark:bg-teal-400 dark:hover:bg-teal-500 text-white rounded-md"
             />
             </div>
+
         </div>
     );
 }
