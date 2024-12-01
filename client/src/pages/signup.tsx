@@ -36,7 +36,8 @@ export default function Signup(){
         const handleSubmit   =async(e : React.FormEvent)=>{ 
             e.preventDefault()
             try{
-              const response =  await axios.post(`${api}/user/signup` , user)
+                //localhost/8080/users
+              const response =  await axios.post(`${api}users` , user)
               alert("success")
               console.log(response.data)
               navigate('/login')

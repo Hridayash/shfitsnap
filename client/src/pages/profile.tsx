@@ -104,7 +104,7 @@ export default function Component() {
       <Button 
         label="Logout" 
         onClick={handleLogout}
-        className="bg-red-600 w-full mt-4 flex items-center justify-center py-2 rounded-md text-white hover:bg-red-700 transition"
+        className="bg-red-500 w-full mt-4 flex items-center justify-center py-2 rounded-md text-white hover:bg-red-700 transition"
       />
     </div>
   );

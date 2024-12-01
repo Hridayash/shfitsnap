@@ -46,7 +46,7 @@ export default function Login(){
         const handleSubmit = async(e : React.FormEvent)=>{
             e.preventDefault()
             try{
-                const response = await axios.post(`${api}/user/login` , user)
+                const response = await axios.post(`${api}login` , user)
                 alert("success")
                 console.log(response.data)
                 navigate("/home")

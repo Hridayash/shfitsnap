@@ -16,14 +16,13 @@ function App() {
 
   return (
     <BrowserRouter>
-ß
+
         <Routes>
          <Route path ="/login" element  = {<Login />} />
          <Route path ="/signup" element  = {<Signup/>} />
          <Route path ="/home" element  = {<Home/>} />
          <Route path ="/profile" element  = {<Profile/>} />
          <Route path="/edit" element={<Edit />} />          
-
          <Route path="/terms" element={<Terms />} />  
          <Route path="/privacy" element={<PrivacyPolicy />} />    
 
